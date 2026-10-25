@@ -1,0 +1,6 @@
+dist/
+.worktrees/
+launcher/target/
+release/
+launcher/mappings.local.json
+mappings.local.json

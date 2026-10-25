@@ -1,0 +1,13 @@
+{
+  "project": "kanata",
+  "tag": "v1.11.0",
+  "commit": "4e6bec4d52d044bd13cfa01cea4e02dc2d246c65",
+  "source_url": "https://codeload.github.com/jtroo/kanata/tar.gz/4e6bec4d52d044bd13cfa01cea4e02dc2d246c65",
+  "source_sha256": "31825467c541eb522e78e5a48ab241fe80b5c5348fe6403e5259b1cd5994ce3b",
+  "cargo_toml_sha256": "814925f8df9bb796e22df3b3e09b2de4bf529f0687f14a546902ed20f109ff56",
+  "cargo_lock_sha256": "6a6165ae19c01b7aecfd3becdef5901c45ddf0e2e63159b03c0c4a4e0ddb2400",
+  "gpl_notice": {
+    "url": "https://raw.githubusercontent.com/spdx/license-list-data/d46e94e2c78ceede1cfc63cfa0396472d2798d4c/text/GPL-3.0-only.txt",
+    "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0"
+  }
+}

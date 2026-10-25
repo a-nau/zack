@@ -1,0 +1,14 @@
+{
+    "folders": {
+        "work": {
+            "label": "Internal repo (add private entries here)",
+            "cursor_uri": "vscode-remote://ssh-remote+me@internal-host/home/me/code/thing"
+        }
+    },
+    "hotkeys": {
+        "w": {
+            "label": "Internal dashboard",
+            "url": "https://internal.example.com/dashboard"
+        }
+    }
+}

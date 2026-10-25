@@ -1,0 +1,395 @@
+{
+    "cursor_cli": "cursor",
+    "modes": {
+        "g": {
+            "label": "Google",
+            "url": "https://www.google.com/search?q={query}"
+        },
+        "gs": {
+            "label": "Google Scholar",
+            "url": "https://scholar.google.com/scholar?q={query}"
+        },
+        "d": {
+            "label": "DuckDuckGo",
+            "url": "https://duckduckgo.com/?q={query}"
+        },
+        "y": {
+            "label": "YouTube",
+            "url": "https://www.youtube.com/results?search_query={query}"
+        },
+        "m": {
+            "label": "Google Maps",
+            "url": "https://www.google.com/maps/search/?api=1&query={query}"
+        },
+        "i": {
+            "label": "Google Images",
+            "url": "https://www.google.com/search?tbm=isch&q={query}"
+        }
+    },
+    "folders": {
+        "root": {
+            "label": "Filesystem root",
+            "path": {
+                "linux": "/",
+                "macos": "/",
+                "windows": "C:\\"
+            }
+        },
+        "c": {
+            "label": "Filesystem root",
+            "path": {
+                "linux": "/",
+                "macos": "/",
+                "windows": "C:\\"
+            }
+        },
+        "apps": {
+            "label": "Applications",
+            "path": {
+                "macos": "/Applications",
+                "windows": "C:\\Program Files"
+            }
+        },
+        "programs": {
+            "label": "Program Files",
+            "path": {
+                "macos": "/Applications",
+                "windows": "C:\\Program Files"
+            }
+        },
+        "programsx": {
+            "label": "Program Files (x86)",
+            "path": {
+                "windows": "C:\\Program Files (x86)"
+            }
+        },
+        "user": {
+            "label": "Home",
+            "path": "~"
+        },
+        "down": {
+            "label": "Downloads",
+            "path": "~/Downloads"
+        },
+        "docs": {
+            "label": "Documents",
+            "path": "~/Documents"
+        },
+        "code": {
+            "label": "Code",
+            "path": {
+                "linux": "~/code",
+                "macos": "~/code",
+                "windows": "C:\\code"
+            }
+        },
+        "data": {
+            "label": "Data",
+            "path": {
+                "linux": "~/data",
+                "macos": "~/data",
+                "windows": "C:\\data"
+            }
+        },
+        "dev": {
+            "label": "Dev folder",
+            "path": {
+                "windows": "C:\\dev"
+            }
+        },
+        "gem": {
+            "label": "Gemini",
+            "url": "https://gemini.google.com/app"
+        },
+        "nblm": {
+            "label": "NotebookLM",
+            "url": "https://notebooklm.google.com/"
+        },
+        "gdrive": {
+            "label": "Google Drive",
+            "url": "https://drive.google.com/drive/home"
+        }
+    },
+    "commands": {
+        "date": {
+            "label": "Copy current date",
+            "action": "copy_date"
+        },
+        "rel": {
+            "label": "Reload mappings + hotkeys",
+            "action": "reload"
+        },
+        "config": {
+            "label": "Open mappings.json",
+            "action": "open_config"
+        },
+        "dir": {
+            "label": "Open config directory",
+            "action": "open_config_dir"
+        },
+        "check": {
+            "label": "Sanity check: window detection -> log",
+            "action": "diag"
+        },
+        "update": {
+            "label": "Update zack (git pull + reinstall)",
+            "action": "update"
+        },
+        "dict": {
+            "label": "Toggle macOS dictation",
+            "action": "dictation"
+        }
+    },
+    "hotkeys": {
+        "b": {
+            "label": "VS Code",
+            "app": {
+                "macos": "Visual Studio Code",
+                "linux": "code",
+                "windows": "code"
+            }
+        },
+        "c": {
+            "label": "Codex",
+            "app": {
+                "macos": "ChatGPT",
+                "windows": "codex:",
+                "windows_match": "ChatGPT.exe"
+            }
+        },
+        "e": {
+            "label": "Outlook",
+            "app": {
+                "macos": "Microsoft Outlook",
+                "windows": "olk"
+            }
+        },
+        "f": {
+            "label": "Chrome",
+            "app": {
+                "macos": "Google Chrome",
+                "linux": "google-chrome",
+                "windows": "chrome"
+            }
+        },
+        "g": {
+            "label": "Files",
+            "app": {
+                "macos": "Finder",
+                "linux": "nautilus",
+                "windows": "explorer",
+                "windows_match": "CabinetWClass"
+            }
+        },
+        "i": {
+            "label": "Slack",
+            "app": {
+                "macos": "Slack",
+                "linux": "slack",
+                "windows": "slack"
+            }
+        },
+        "m": {
+            "label": "Microsoft Teams",
+            "app": {
+                "macos": "Microsoft Teams",
+                "windows": "msteams:",
+                "windows_match": "ms-teams.exe"
+            }
+        },
+        "s": {
+            "label": "ChatGPT",
+            "url": "https://chatgpt.com/"
+        },
+        "t": {
+            "label": "Terminal (Ghostty on macOS)",
+            "app": {
+                "macos": "Ghostty",
+                "linux": "gnome-terminal",
+                "windows": "wt",
+                "windows_match": "WindowsTerminal.exe"
+            }
+        },
+        "v": {
+            "label": "Cursor",
+            "app": {
+                "macos": "Cursor",
+                "linux": "cursor",
+                "windows": "cursor"
+            }
+        }
+    },
+    "contexts": [
+        {
+            "label": "Codex / ChatGPT dictation",
+            "match": {
+                "windows": [
+                    "ChatGPT.exe"
+                ]
+            },
+            "keys": {
+                "d": {
+                    "hold": "ctrl+shift+d"
+                }
+            }
+        },
+        {
+            "label": "Codex dictation (macOS) \u2014 set Codex Settings > General > Dictation shortcut to Ctrl+Option+Shift+D",
+            "match": {
+                "macos": [
+                    "ChatGPT",
+                    "com.openai.codex",
+                    "com.openai.chat"
+                ]
+            },
+            "keys": {
+                "d": {
+                    "hold": "ctrl+alt+shift+d"
+                }
+            }
+        },
+        {
+            "label": "VS Code / Cursor panes (ported from AHK)",
+            "match": {
+                "windows": [
+                    "Code.exe",
+                    "Cursor.exe"
+                ]
+            },
+            "keys": {
+                "1": "ctrl+shift+e",
+                "2": "ctrl+shift+f",
+                "3": "ctrl+shift+g",
+                "4": "ctrl+shift+alt+d",
+                "5": "ctrl+shift+x",
+                "6": "ctrl+alt+o",
+                "9": "ctrl+grave",
+                "0": "ctrl+shift+e",
+                "x": "ctrl+f4",
+                "f9": "ctrl+shift+grave"
+            }
+        },
+        {
+            "label": "Slack left-nav views",
+            "match": {
+                "windows": [
+                    "slack.exe"
+                ]
+            },
+            "keys": {
+                "1": "ctrl+shift+1",
+                "2": "ctrl+shift+2",
+                "3": "ctrl+shift+m",
+                "4": "ctrl+shift+4",
+                "5": "ctrl+shift+5",
+                "[": "alt+left",
+                "]": "alt+right"
+            }
+        },
+        {
+            "label": "Everywhere else (catch-all; specific contexts above win)",
+            "match": {
+                "windows": [
+                    "*"
+                ]
+            },
+            "keys": {
+                "f24": "capslock",
+                "n": "ctrl+n",
+                "z": "alt+left",
+                "x": "alt+f4",
+                "[": "ctrl+shift+tab",
+                "]": "ctrl+tab"
+            }
+        },
+        {
+            "label": "VS Code / Cursor panes (macOS)",
+            "match": {
+                "macos": [
+                    "Visual Studio Code",
+                    "Cursor",
+                    "com.microsoft.VSCode",
+                    "com.todesktop.230313mzl4w4u92"
+                ]
+            },
+            "keys": {
+                "1": "cmd+shift+e",
+                "2": "cmd+shift+f",
+                "3": "ctrl+shift+g",
+                "4": "cmd+shift+d",
+                "5": "cmd+shift+x",
+                "6": "ctrl+alt+o",
+                "9": "ctrl+grave",
+                "0": "cmd+shift+e",
+                "x": "cmd+w",
+                "[": "ctrl+pageup",
+                "]": "ctrl+pagedown",
+                "f9": "ctrl+shift+grave"
+            }
+        },
+        {
+            "label": "Slack left-nav views (macOS)",
+            "match": {
+                "macos": [
+                    "Slack",
+                    "com.tinyspeck.slackmacgap"
+                ]
+            },
+            "keys": {
+                "1": "ctrl+1",
+                "2": "ctrl+2",
+                "3": "cmd+shift+m",
+                "4": "ctrl+4",
+                "5": "ctrl+5",
+                "[": "cmd+lbracket",
+                "]": "cmd+rbracket"
+            }
+        },
+        {
+            "label": "Chrome tabs (macOS)",
+            "match": {
+                "macos": [
+                    "Google Chrome",
+                    "com.google.Chrome"
+                ]
+            },
+            "keys": {
+                "[": "ctrl+shift+tab",
+                "]": "ctrl+tab"
+            }
+        },
+        {
+            "label": "Terminal tabs (macOS)",
+            "match": {
+                "macos": [
+                    "Terminal",
+                    "com.apple.Terminal",
+                    "Ghostty",
+                    "com.mitchellh.ghostty"
+                ]
+            },
+            "keys": {
+                "[": "cmd+shift+lbracket",
+                "]": "cmd+shift+rbracket"
+            }
+        },
+        {
+            "label": "Everywhere else (macOS catch-all)",
+            "match": {
+                "macos": [
+                    "*"
+                ]
+            },
+            "keys": {
+                "d": "dictation",
+                "f11": "ctrl+cmd+f",
+                "f12": "ctrl+shift+cmd+4",
+                "n": "cmd+n",
+                "z": "cmd+lbracket",
+                "x": "cmd+w",
+                "[": "ctrl+shift+tab",
+                "]": "ctrl+tab"
+            }
+        }
+    ]
+}

@@ -1,0 +1,150 @@
+{
+  "cursor_cli": "cursor",
+  "modes": {
+    "g": {
+      "label": "Google",
+      "url": "https://www.google.com/search?q={query}"
+    },
+    "gs": {
+      "label": "Google Scholar",
+      "url": "https://scholar.google.com/scholar?q={query}"
+    },
+    "d": {
+      "label": "DuckDuckGo",
+      "url": "https://duckduckgo.com/?q={query}"
+    },
+    "y": {
+      "label": "YouTube",
+      "url": "https://www.youtube.com/results?search_query={query}"
+    },
+    "m": {
+      "label": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query={query}"
+    }
+  },
+  "folders": {
+    "down": {
+      "label": "Downloads",
+      "path": "~/Downloads"
+    },
+    "docs": {
+      "label": "Documents",
+      "path": {
+        "linux": "~/Documents",
+        "macos": "~/Documents",
+        "windows": "C:\\Users\\you\\Documents"
+      }
+    },
+    "apps": {
+      "label": "Applications",
+      "path": {
+        "macos": "/Applications",
+        "windows": "C:\\Program Files"
+      }
+    },
+    "repo": {
+      "label": "Main project in Cursor (local)",
+      "cursor_uri": "~/code/my-project"
+    },
+    "remote": {
+      "label": "Main project in Cursor (remote)",
+      "cursor_uri": "vscode-remote://ssh-remote+user@host/home/user/code/my-project"
+    },
+    "mail": {
+      "label": "Webmail",
+      "url": "https://mail.example.com"
+    }
+  },
+  "commands": {
+    "date": {
+      "label": "Copy current date",
+      "action": "copy_date"
+    },
+    "rel": {
+      "label": "Reload mappings + hotkeys",
+      "action": "reload"
+    },
+    "config": {
+      "label": "Open mappings.json",
+      "action": "open_config"
+    },
+    "dir": {
+      "label": "Open config directory",
+      "action": "open_config_dir"
+    },
+    "check": {
+      "label": "Sanity check: window detection -> log",
+      "action": "diag"
+    },
+    "update": {
+      "label": "Update zack (git pull + reinstall)",
+      "action": "update"
+    }
+  },
+  "hotkeys": {
+    "b": {
+      "label": "VS Code",
+      "app": {
+        "macos": "Visual Studio Code",
+        "linux": "code",
+        "windows": "code"
+      }
+    },
+    "f": {
+      "label": "Browser",
+      "app": {
+        "macos": "Google Chrome",
+        "linux": "google-chrome",
+        "windows": "chrome"
+      }
+    },
+    "g": {
+      "label": "Files",
+      "app": {
+        "macos": "Finder",
+        "linux": "nautilus",
+        "windows": "explorer",
+        "windows_match": "CabinetWClass"
+      }
+    },
+    "t": {
+      "label": "Terminal",
+      "app": {
+        "macos": "Terminal",
+        "linux": "gnome-terminal",
+        "windows": "wt",
+        "windows_match": "WindowsTerminal.exe"
+      }
+    },
+    "s": {
+      "label": "Search engine",
+      "url": "https://duckduckgo.com"
+    }
+  },
+  "contexts": [
+    {
+      "label": "VS Code: pane shortcuts while the editor is focused",
+      "match": {
+        "windows": [
+          "Code.exe"
+        ]
+      },
+      "keys": {
+        "1": "ctrl+shift+e",
+        "9": "ctrl+grave",
+        "x": "ctrl+f4"
+      }
+    },
+    {
+      "label": "Everywhere else (catch-all; specific contexts above win)",
+      "match": {
+        "windows": [
+          "*"
+        ]
+      },
+      "keys": {
+        "x": "alt+f4"
+      }
+    }
+  ]
+}

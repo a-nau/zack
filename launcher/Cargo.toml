@@ -1,0 +1,45 @@
+[package]
+name = "zack"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Cross-platform Caps-driven launcher: chooser UI + Hyper hotkeys, configured by mappings.json"
+
+[dependencies]
+# X11-only on Linux: global-hotkey has no Wayland support (see README).
+eframe = { version = "0.35", default-features = false, features = ["glow", "x11", "default_fonts"] }
+global-hotkey = "0.8"
+nucleo-matcher = "0.3"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+open = "5"
+dirs = "6"
+display-info = "0.5"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = [
+    "Win32_Foundation",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_System_Threading",
+] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+core-graphics = "0.23"
+core-foundation = "0.9"
+objc2 = "0.6"
+raw-window-handle = "0.6"
+objc2-app-kit = { version = "0.3", default-features = false, features = [
+    "std",
+    "NSEvent",
+    "NSRunningApplication",
+    "NSScreen",
+    "NSView",
+    "NSWindow",
+    "NSWorkspace",
+] }
+
+[profile.release]
+strip = true
+lto = true

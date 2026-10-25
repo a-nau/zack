@@ -1,0 +1,30 @@
+;; zack keyboard layer — kanata's ONLY job here:
+;;   CapsLock single tap -> nothing
+;;   CapsLock double tap -> Escape
+;;   CapsLock hold       -> Hyper (Ctrl+Alt+Shift), consumed by the zack daemon.
+;;
+;; Hyper deliberately excludes Super/Win: Ctrl+Alt+Shift+Win is the reserved
+;; Windows Office-key combo. This config is shared by Linux and Windows.
+;;
+;; process-unmapped-keys is required so tap-hold-press can see other key
+;; presses and resolve the hold early. all-except lctl ralt avoids the
+;; documented Windows AltGr issue (relevant for German layouts).
+(defcfg
+  process-unmapped-keys (all-except lctl ralt)
+)
+
+(defsrc caps lalt)
+
+(defalias
+  ;; Check the physical left-Alt input directly. Alt+Caps emits a private
+  ;; Hyper+F24 signal; Zack receives it, lifts Hyper, and toggles CapsLock.
+  caps-action (switch
+    ((input real lalt)) (multi lctl lsft f24) break
+    () (tap-hold-press 1 200 (tap-dance 200 (XX esc)) (multi lctl lalt lsft)) break)
+  ;; tap-hold-press: hold resolves as soon as another key is pressed, so
+  ;; fast Caps+letter chords fire without waiting for the 200 ms timeout.
+  ;; The 1 ms tap-repress window lets tap-dance see two distinct quick taps.
+  hyp @caps-action
+)
+
+(deflayer base @hyp lalt)
